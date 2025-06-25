@@ -1,0 +1,76 @@
+# AutoOrganizer AI - Project Dependencies (Free tools only)
+# Smart file organization system with AI
+
+# Main libraries for file analysis
+python-magic-bin>=0.4.14        # MIME type detection
+Pillow>=9.0.0                   # Image processing
+python-docx>=0.8.11             # Word document analysis
+PyPDF2>=3.0.0                   # PDF file reading
+openpyxl>=3.0.0                 # Excel file processing
+pandas>=1.5.0                   # Data analysis and CSV
+
+# File system monitoring
+watchdog>=3.0.0                 # Real-time file monitoring
+pathlib2>=2.3.0                 # Path manipulation (backup for Python < 3.4)
+
+# User interface and presentation
+colorama>=0.4.6                 # Terminal colors
+tqdm>=4.66.0                    # Progress bars
+
+# System utilities
+psutil>=5.9.0                   # System information
+click>=8.1.0                    # Command line interface
+
+# Free AI and analysis
+requests>=2.31.0                # HTTP requests
+nltk>=3.8.0                     # Free natural language processing
+scikit-learn>=1.3.0             # Free machine learning
+
+# Free text processing
+chardet>=5.2.0                  # Text encoding detection
+textstat>=0.7.3                 # Text statistics
+fuzzywuzzy>=0.18.0              # Fuzzy text comparison
+python-Levenshtein>=0.20.0      # String distance algorithms
+
+# Free OCR with Tesseract
+pytesseract>=0.3.10             # Free OCR
+opencv-python>=4.8.0            # Image processing for OCR
+
+# Multimedia metadata analysis
+mutagen>=1.47.0                 # Audio/video file metadata
+
+# Compression and files
+py7zr>=0.20.0                   # 7z file support
+rarfile>=4.1.0                  # RAR file support
+
+# Logging and configuration
+loguru>=0.7.0                   # Advanced logging
+pyyaml>=6.0.0                   # YAML configuration files
+toml>=0.10.0                    # TOML support
+
+# Security
+cryptography>=41.0.0            # Cryptographic functions for secure hashing
+
+# Testing and development (optional)
+pytest>=7.4.0                   # Testing framework
+black>=23.9.0                   # Code formatter
+flake8>=6.1.0                   # Code linter
+
+# Bases de datos (para logging avanzado)
+sqlite3                         # Base de datos integrada (parte de Python)
+
+# Multimedia (análisis avanzado)
+mutagen==1.47.0                 # Metadatos de archivos de audio
+moviepy==1.0.3                  # Procesamiento de video (opcional)
+
+# Utilidades web
+beautifulsoup4==4.12.2          # Parsing HTML (para reportes)
+jinja2==3.1.2                   # Motor de plantillas para reportes
+
+# Análisis de contenido de imágenes
+pytesseract==0.3.10             # OCR para extraer texto de imágenes
+opencv-python==4.8.1.78         # Procesamiento de imágenes avanzado
+
+# Compresión y archivos especiales
+py7zr==0.20.6                   # Soporte para archivos 7z
+patool==1.12                    # Extractor universal de archivos comprimidos
