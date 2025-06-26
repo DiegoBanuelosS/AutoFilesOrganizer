@@ -207,7 +207,8 @@ If you encounter any issues:
 4. Open an issue on GitHub with log details
 
 ---
-
+## note
+All codes have comments to facilitate their interpretation.
 
 ## Author
 
