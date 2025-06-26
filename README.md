@@ -1,185 +1,213 @@
-# Smart File Organizer AI System
+# AutoFilesOrganizer 
 
-## Intelligent File Organization with AI
+An AI-powered automatic file organizer that intelligently categorizes and organizes files based on their content, not just file extensions. Using advanced AI analysis, it creates structured directory hierarchies with meaningful categories and subdirectories.
 
-Smart File Organizer is an advanced system that uses artificial intelligence to automatically analyze, categorize, and organize your files. It uses only **free and open-source tools**, making it accessible to everyone.
+## Features
 
-## Key Features
+- **AI-Powered Analysis**: Uses sentence transformers to understand file content and context
+- **Intelligent Categorization**: Organizes files by topic and function, not just file type
+- **Hierarchical Structure**: Creates detailed subdirectory structures for better organization
+- **Content-Aware**: Analyzes file content, comments, and metadata for accurate categorization
+- **Batch Processing**: Processes multiple files efficiently with detailed logging
+- **Structure Visualization**: Shows complete organization structure with file counts
+- **Safe Operation**: Tracks processed files to avoid duplicates
 
-### AI Analysis
-- **Content analysis** using NLTK for natural language processing
-- **Automatic categorization** based on file content
-- **Smart subcategories** for documents (contracts, invoices, reports, etc.)
-- **OCR support** with Tesseract for image text extraction
-- **Machine learning** with scikit-learn for advanced classification
-
-### Smart Organization
-- **Separate input/output folders** for better workflow
-- **Automatic directory structure** creation
-- **Duplicate handling** with intelligent renaming
-- **System file protection** - won't organize program files
-- **Real-time monitoring** for new files
-
-### Supported File Types
-- **Documents**: PDF, Word, Text, RTF, ODT
-- **Images**: JPG, PNG, GIF, BMP, TIFF, SVG, WebP
-- **Videos**: MP4, AVI, MKV, MOV, WMV, FLV, WebM
-- **Audio**: MP3, WAV, FLAC, AAC, OGG, WMA
-- **Code**: Python, JavaScript, HTML, CSS, Java, C++, PHP, etc.
-- **Data**: Excel, CSV, JSON, XML, SQL
-- **Presentations**: PowerPoint, LibreOffice Impress
-- **Compressed**: ZIP, RAR, 7Z, TAR, GZ
-- **Executables**: EXE, MSI, DEB, RPM, DMG
-
-## Installation
-
-1. **Clone the repository**:
-```bash
-git clone https://github.com/username/AutoOrganizer.git
-cd AutoOrganizer
-```
-
-2. **Install dependencies**:
-```bash
-pip install -r requirements.txt
-```
-
-3. **Run the system**:
-```bash
-python main.py
-```
-
-## Directory Structure
+##  Directory Structure
 
 ```
 AutoOrganizer/
-├── input_files/          # Drop your files here
-├── organized_files/       # Organized files appear here
-│   ├── documents/
-│   │   ├── contracts/
-│   │   ├── invoices/
-│   │   ├── reports/
-│   │   └── ...
-│   ├── images/
-│   ├── videos/
-│   └── ...
-├── main.py               # Main system
-├── ai_analyzer.py        # AI module
-├── utils.py              # Utilities
-└── requirements.txt      # Dependencies
+├── input_files/           # Files to be organized (upload here)
+├── organized_files/       # AI-organized output directory
+├── main.py               # Main application entry point
+├── ai_analyzer.py        # AI categorization engine
+├── utils.py              # Utility functions
+├── requirements.txt      # Python dependencies
+├── processed_files.json  # Tracking file (auto-generated)
+└── system.log           # Application logs
 ```
 
-## How to Use
+## AI Categories
 
-1. **Start the program**:
+The system automatically organizes files into intelligent categories:
+
+### Development_Code
+- **Configuration**: Config files, settings, environments
+- **Database**: SQL schemas, database files
+- **Python_Projects**: Python scripts and applications
+- **Web_Development**: Frontend code, web frameworks
+- **Mobile_Development**: Mobile app code
+- **Desktop_Applications**: Desktop software code
+
+### Work_Projects
+- **Reports**: Business reports, analytics
+- **Presentations**: Slides, presentation files
+- **Spreadsheets**: Excel files, data analysis
+- **Meetings**: Meeting notes, minutes
+
+### Finance_Money
+- **Budgets**: Budget files, financial planning
+- **Invoices**: Bills, invoices, receipts
+- **Reports**: Financial reports, statements
+
+### Media_Content
+- **Images**: Photos, graphics, artwork
+- **Videos**: Video files, multimedia
+- **Audio**: Music, podcasts, sound files
+- **Design**: Design files, mockups
+
+### Education_Learning
+- **Courses**: Course materials, lectures
+- **Research**: Academic papers, studies
+- **Tutorials**: Learning materials, guides
+
+### Tools_Utilities
+- **Configuration**: System configs, settings
+- **Installers**: Installation files, setups
+- **Scripts**: Utility scripts, automation
+
+### Reference_Documentation
+- **Manuals**: User guides, documentation
+- **Specifications**: Technical specs
+- **General**: General reference materials
+
+## Next Changes
+- UI
+- Better organization
+- optimized AI
+- and more functions...
+
+##  Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/DiegoBanuelosS/AutoOrganizer.git
+   cd AutoOrganizer
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **First run** (downloads AI model):
    ```bash
    python main.py
    ```
 
-2. **Place files** in the `input_files` folder
+## Usage
 
-3. **Choose an option**:
-   - **Option 1**: Organize existing files
-   - **Option 2**: Monitor folder in real-time
-   - **Option 3**: View statistics
-   - **Option 4**: View folder structure
-   - **Option 5**: Open input folder
-   - **Option 6**: Open output folder
+### Basic Organization
+Place files in the `input_files/` directory and run:
+```bash
+python main.py
+```
 
-4. **Check results** in the `organized_files` folder
+### Show Organization Structure
+View the complete organized structure:
+```bash
+python main.py --show-structure
+```
 
-## AI Features
+### Continuous Monitoring
+Run in continuous mode to monitor for new files:
+```bash
+python main.py --continuous
+```
 
-### Content Analysis
-- **Text extraction** from PDFs and Word documents
-- **Language detection** (English/Spanish)
-- **Keyword extraction** using NLP
-- **Topic identification** 
-- **Readability analysis**
+### Command Line Options
+- `--show-structure`: Display the complete organization structure
+- `--continuous`: Run in continuous monitoring mode
+- `--help`: Show help message
 
-### Smart Categorization
-- **Contract detection**: Legal terms, signatures, parties
-- **Invoice recognition**: Payment terms, amounts, taxes
-- **Report identification**: Analysis, findings, conclusions
-- **Manual detection**: Instructions, procedures, guides
-- **Certificate recognition**: Awards, qualifications, achievements
+## Example Output
 
-## Monitoring
+```
+ Development_Code (15 files)
+├──  Python_Projects (8 files)
+│   ├── web_scraper.py
+│   ├── ml_house_predictor.py
+│   ├── task_manager.py
+│   └── sales_report_q4.py
+├──  Database (3 files)
+│   ├── ecommerce_schema.sql
+│   └── user_database.sql
+└──  Configuration (4 files)
+    ├── config.json
+    └── settings.yml
 
-The system can monitor the input folder in real-time:
-- **Automatic detection** of new files
-- **Instant organization** upon file creation
-- **Background processing** without interrupting work
-- **Press Ctrl+C** to stop monitoring
+ Tools_Utilities (7 files)
+├──  Configuration (3 files)
+└──  Installers (2 files)
 
-## Statistics and Reports
+ Grand Total: 22 organized files
+```
 
-- **Files processed** count
-- **Success/error** rates
-- **Category distribution**
-- **Processing time** tracking
-- **Folder structure** visualization
+##  How It Works
 
-## Security and Privacy
+1. **File Scanning**: Scans `input_files/` directory for new files
+2. **Content Analysis**: AI analyzes file content, structure, and metadata
+3. **Category Assignment**: Assigns appropriate category and subdirectory
+4. **Intelligent Organization**: Moves files to structured directories
+5. **Progress Tracking**: Logs all operations and tracks processed files
 
-- **100% local processing** - no data sent to external servers
-- **No paid APIs required** - uses only open-source tools
-- **Open source** - full transparency
-- **System file protection** - won't touch important files
+##  Technical Details
 
-## AI Tools Used
+- **AI Model**: Uses `all-MiniLM-L6-v2` sentence transformer
+- **Content Analysis**: Reads file content, comments, and metadata
+- **Confidence Scoring**: Each categorization includes confidence level
+- **Fallback Logic**: Uses file extension as backup for unknown files
+- **Error Handling**: Comprehensive error handling and logging
 
-- **NLTK**: Natural Language Processing
-- **scikit-learn**: Machine Learning
-- **Tesseract**: Optical Character Recognition
-- **TextStat**: Text Analysis
-- **FuzzyWuzzy**: String Matching
-- **OpenCV**: Image Processing
+##  Logging
 
-## Troubleshooting
+The system provides detailed logging:
+- **File Operations**: Track all file movements
+- **AI Analysis**: Confidence scores and reasoning
+- **Error Handling**: Detailed error messages
+- **Statistics**: Processing stats and summaries
 
-### Common Issues
+##  Configuration
 
-1. **AI not available**: Install missing packages
-   ```bash
-   pip install nltk scikit-learn textstat fuzzywuzzy
-   ```
+### Adding Custom Categories
+Edit `ai_analyzer.py` to add new categories:
+```python
+self.categories = {
+    "Your_Custom_Category": {
+        "keywords": ["keyword1", "keyword2"],
+        "subdirectories": ["SubDir1", "SubDir2"]
+    }
+}
+```
 
-2. **OCR not working**: Install Tesseract
-   - Windows: Download from GitHub releases
-   - Linux: `sudo apt-get install tesseract-ocr`
-   - macOS: `brew install tesseract`
+### Ignore Files
+Edit `utils.py` to customize ignored files:
+```python
+def should_ignore_file(file_path: Path) -> bool:
+    # Add your custom ignore logic
+    return file_path.name.startswith('custom_prefix')
+```
 
-3. **File not organizing**: Check file permissions and size limits
+##  License
 
-## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+##  Acknowledgments
 
-## Acknowledgments
+- [Sentence Transformers](https://www.sbert.net/) for the AI model
+- [Hugging Face](https://huggingface.co/) for transformer models
+- Python ecosystem for excellent libraries
 
-- **NLTK Team** for natural language processing
-- **scikit-learn** for machine learning tools
-- **Tesseract** for OCR capabilities
-- **Open source community** for AI tools
+##  Support
+
+If you encounter any issues:
+
+1. Check the `system.log` file for detailed error messages
+2. Ensure all dependencies are installed correctly
+3. Verify file permissions for `input_files/` and `organized_files/`
+4. Open an issue on GitHub with log details
 
 ---
 
-## Quick Start Example
-
-```bash
-# Install and run
-git clone https://github.com/username/AutoOrganizer.git
-cd AutoOrganizer
-pip install -r requirements.txt
-python main.py
-
-# Place some files in input_files/ folder
-# Select option 1 to organize them
-# Check organized_files/ for results
-```
-
-**Enjoy organized files with AI power!**
 
 ## Author
 
